@@ -1,0 +1,46 @@
+.landing-page {
+    height: 100vh;
+    background-image: url('/path-to-your-image.jpg'); /* Use a beautiful background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.welcome-message h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.welcome-message p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.explore-button {
+    background-color: #ff8c00;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+    background-color: #ff7000;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
