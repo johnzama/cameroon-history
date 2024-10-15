@@ -1,46 +1,44 @@
-.landing-page {
-    height: 100vh;
-    background-image: url('/images/landscape.jpg'); /* Correct path for the background image */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
+/* LandingPage.css */
+
+.landing-container {
+  height: 100vh;
+  background-image: url('/images/landscape.jpg'); /* Corrected image path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.welcome-message h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    animation: fadeIn 2s ease-in-out;
+.landing-content {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly darkens the content background */
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.welcome-message p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-.explore-button {
-    background-color: #ff8c00;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
-.explore-button:hover {
-    background-color: #ff7000;
+.cta-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.cta-button:hover {
+  background-color: #cc5200;
 }
 

@@ -1,18 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './LandingPage.css';
+import './LandingPage.css'; // Make sure your CSS file is linked properly
 
 const LandingPage = () => {
   return (
-    <div className="landing-page">
-      <div className="welcome-message">
-        <h1>Welcome to the History of Cameroon</h1>
-        <p>Explore the rich culture, history, and geography of this beautiful nation.</p>
-        <Link to="/history" className="explore-button">Explore History</Link>
+    <div className="landing-container">
+      <div className="landing-content">
+        <h1>Explore Cameroon’s Legacy: From Ancient Times to Today</h1>
+        <p>Discover the untold story of Cameroon’s rich history, diverse cultures, and ancient roots.</p>
+        <button className="cta-button">Discover More</button>
       </div>
+
+      {/* Optionally, if you want to display the image as a normal img tag */}
+      {/* <img src="/images/landscape.jpg" alt="Landscape of Cameroon" /> */}
     </div>
   );
-}
+};
 
 export default LandingPage;
 
