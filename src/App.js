@@ -9,6 +9,7 @@ import ArtCraft from './components/ArtCraft';
 import ModernCameroon from './components/ModernCameroon';
 import NavBar from './components/NavBar';  // Import NavBar
 import Footer from './components/Footer';  // Import Footer
+import 'leaflet/dist/leaflet.css';
 
 function App() {
   return (
