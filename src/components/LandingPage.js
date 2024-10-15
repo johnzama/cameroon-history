@@ -1,17 +1,18 @@
 import React from 'react';
-import './LandingPage.css'; // This imports the CSS file for styling
+import { Link } from 'react-router-dom';
+import './LandingPage.css';
 
 const LandingPage = () => {
   return (
     <div className="landing-page">
       <div className="welcome-message">
-        <h1>Welcome to Cameroon</h1>
-        <p>Explore the rich history, culture, and beauty of this remarkable country.</p>
-        <a href="#history-section" className="explore-button">Explore Now</a>
+        <h1>Welcome to the History of Cameroon</h1>
+        <p>Explore the rich culture, history, and geography of this beautiful nation.</p>
+        <Link to="/history" className="explore-button">Explore History</Link>
       </div>
     </div>
   );
-};
+}
 
 export default LandingPage;
 
