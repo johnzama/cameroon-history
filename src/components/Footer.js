@@ -1,20 +1,25 @@
-import React from 'react';
-import './Footer.css';
-
-const Footer = () => {
+function App() {
   return (
-    <footer className="footer">
-      <div className="footer-content">
-        <p>© 2024 Dedicated to the People of Cameroon</p>
-        <p>Website created by John Zama</p>
-        <div className="footer-links">
-          <a href="mailto:contact@cameroonhistory.com">Email: contact@cameroonhistory.com</a>
-          <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
+    <Router>
+      <div className="App">
+        <NavBar /> {/* Navigation bar at the top */}
+
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/culture" element={<Culture />} />
+          <Route path="/geography" element={<Geography />} />
+          <Route path="/food" element={<Food />} />
+          <Route path="/art-craft" element={<ArtCraft />} />
+          <Route path="/modern" element={<ModernCameroon />} />
+          <Route path="/map" element={<Map />} /> {/* Map route */}
+          <Route path="/contact" element={<ContactForm />} />
+          <Route path="/gallery" element={<Gallery />} />
+        </Routes>
+
+        <Footer /> {/* Footer at the bottom */}
       </div>
-    </footer>
+    </Router>
   );
 }
-
-export default Footer;
 
