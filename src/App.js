@@ -9,6 +9,7 @@ import ArtCraft from './components/ArtCraft';
 import ModernCameroon from './components/ModernCameroon';
 import NavBar from './components/NavBar';  // Import NavBar
 import Footer from './components/Footer';  // Import Footer
+import Map from './components/Map';       // Import Map Component
 import 'leaflet/dist/leaflet.css';
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
           <Route path="/food" element={<Food />} />
           <Route path="/art-craft" element={<ArtCraft />} />
           <Route path="/modern" element={<ModernCameroon />} />
+
+          {/* Map page */}
+          <Route path="/map" element={<Map />} /> {/* New Map Route */}
         </Routes>
 
         <Footer /> {/* Add Footer at the bottom */}
