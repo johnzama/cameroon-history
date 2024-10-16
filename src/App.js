@@ -12,12 +12,13 @@ import Footer from './components/Footer';
 import Map from './components/Map';
 import ContactForm from './components/ContactForm';
 import Gallery from './components/Gallery';
+import Video from './components/Video'; // Import Video component
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar /> {/* Navigation Bar */}
+        <NavBar />
 
         <Routes>
           <Route path="/" element={<LandingPage />} />
@@ -27,12 +28,13 @@ function App() {
           <Route path="/food" element={<Food />} />
           <Route path="/art-craft" element={<ArtCraft />} />
           <Route path="/modern" element={<ModernCameroon />} />
-          <Route path="/map" element={<Map />} /> {/* Map route */}
+          <Route path="/map" element={<Map />} />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/video" element={<Video />} /> {/* Video route */}
         </Routes>
 
-        <Footer /> {/* Footer at the bottom */}
+        <Footer />
       </div>
     </Router>
   );

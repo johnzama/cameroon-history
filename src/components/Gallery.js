@@ -1,17 +1,17 @@
 import React from 'react';
-import './Gallery.css';
+import './Gallery.css'; // You can create this file for styling
 
 const images = [
-  { src: '/path/to/image1.jpg', alt: 'Image 1' },
-  { src: '/path/to/image2.jpg', alt: 'Image 2' },
-  { src: '/path/to/image3.jpg', alt: 'Image 3' },
+  { src: 'image1.jpg', alt: 'Traditional Attire' },
+  { src: 'image2.jpg', alt: 'Cameroon Landscape' },
+  { src: 'image3.jpg', alt: 'Cultural Event' },
 ];
 
 const Gallery = () => {
   return (
     <div className="gallery">
       {images.map((image, index) => (
-        <div key={index} className="gallery-item">
+        <div className="gallery-item" key={index}>
           <img src={image.src} alt={image.alt} />
         </div>
       ))}

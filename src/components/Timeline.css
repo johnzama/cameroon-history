@@ -1,0 +1,28 @@
+/* Timeline.css */
+.timeline {
+  margin: 20px auto;
+  width: 80%;
+}
+
+.timeline-event {
+  margin-bottom: 20px;
+  border-left: 4px solid #ccc;
+  padding-left: 20px;
+  position: relative;
+}
+
+.timeline-event h4 {
+  color: #333;
+}
+
+.timeline-event::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+}
+

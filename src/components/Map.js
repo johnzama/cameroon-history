@@ -1,26 +1,23 @@
 import React, { useEffect } from 'react';
 import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import './Map.css'; // Import the CSS file
 
 const Map = () => {
   useEffect(() => {
-    // Initialize map only if not already initialized
-    if (!document.getElementById('map')._leaflet_id) {
-      const map = L.map('map').setView([3.8480, 11.5021], 8); // Coordinates of Cameroon
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
-      }).addTo(map);
-    }
+    const map = L.map('map').setView([3.848, 11.5021], 6); // Cameroon coordinates
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+    }).addTo(map);
 
     // Clean up on unmount
     return () => {
-      const mapContainer = document.getElementById('map');
-      if (mapContainer && mapContainer._leaflet_id) {
-        mapContainer._leaflet_id = null; // Reset the map initialization flag
-      }
+      map.remove();
     };
   }, []);
 
-  return <div id="map" style={{ height: '500px', width: '100%' }} />;
+  return <div id="map"></div>;
 };
 
 export default Map;
