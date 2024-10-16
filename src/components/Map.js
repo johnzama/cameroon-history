@@ -1,27 +1,26 @@
 import React, { useEffect } from 'react';
 import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-import './Map.css';
 
 const Map = () => {
   useEffect(() => {
-    // Initialize the map centered on Cameroon
-    const map = L.map('map').setView([7.3697, 12.3547], 6);
+    // Initialize map only if not already initialized
+    if (!document.getElementById('map')._leaflet_id) {
+      const map = L.map('map').setView([3.8480, 11.5021], 8); // Coordinates of Cameroon
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+    }
 
-    // Add OpenStreetMap tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    // Add a marker for Yaoundé
-    L.marker([3.8480, 11.5021]).addTo(map)
-      .bindPopup('Yaoundé, Capital of Cameroon')
-      .openPopup();
+    // Clean up on unmount
+    return () => {
+      const mapContainer = document.getElementById('map');
+      if (mapContainer && mapContainer._leaflet_id) {
+        mapContainer._leaflet_id = null; // Reset the map initialization flag
+      }
+    };
   }, []);
 
-  return (
-    <div id="map" className="map-container"></div>
-  );
+  return <div id="map" style={{ height: '500px', width: '100%' }} />;
 };
 
 export default Map;

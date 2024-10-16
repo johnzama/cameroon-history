@@ -17,7 +17,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar />
+        <NavBar /> {/* Navigation Bar */}
 
         <Routes>
           <Route path="/" element={<LandingPage />} />
@@ -27,12 +27,12 @@ function App() {
           <Route path="/food" element={<Food />} />
           <Route path="/art-craft" element={<ArtCraft />} />
           <Route path="/modern" element={<ModernCameroon />} />
-          <Route path="/map" element={<Map />} />
+          <Route path="/map" element={<Map />} /> {/* Map route */}
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/gallery" element={<Gallery />} />
         </Routes>
 
-        <Footer />
+        <Footer /> {/* Footer at the bottom */}
       </div>
     </Router>
   );
