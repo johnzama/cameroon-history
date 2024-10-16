@@ -7,35 +7,32 @@ import Geography from './components/Geography';
 import Food from './components/Food';
 import ArtCraft from './components/ArtCraft';
 import ModernCameroon from './components/ModernCameroon';
-import NavBar from './components/NavBar';  // Import NavBar
-import Footer from './components/Footer';  // Import Footer
-import Map from './components/Map';       // Import Map Component
-import 'leaflet/dist/leaflet.css';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import Map from './components/Map';
+import ContactForm from './components/ContactForm';
+import Gallery from './components/Gallery';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar /> {/* Include NavBar at the top */}
+        <NavBar />
 
-        {/* Routes for different components */}
         <Routes>
-          {/* Landing page as the default route */}
           <Route path="/" element={<LandingPage />} />
-
-          {/* Other pages */}
           <Route path="/history" element={<History />} />
           <Route path="/culture" element={<Culture />} />
           <Route path="/geography" element={<Geography />} />
           <Route path="/food" element={<Food />} />
           <Route path="/art-craft" element={<ArtCraft />} />
           <Route path="/modern" element={<ModernCameroon />} />
-
-          {/* Map page */}
-          <Route path="/map" element={<Map />} /> {/* New Map Route */}
+          <Route path="/map" element={<Map />} />
+          <Route path="/contact" element={<ContactForm />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
 
-        <Footer /> {/* Add Footer at the bottom */}
+        <Footer />
       </div>
     </Router>
   );
